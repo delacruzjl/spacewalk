@@ -14,6 +14,11 @@ So we need a better method for writing procedures with multiple people working i
 
 The key here is that the source procedures would not require formatting; they're just text files which have all the pretty formatting added to PDF/DOCX files in the build process. Furthermore, this would allow for options like variables and subroutines.
 
+Example YAML files
+------------------
+
+See [`main.yml`](main.yml) for how the main file may look. `main.yml` references [`pma3-shields-and-connections.yml`](pma3-shields-and-connections.yml) as an included task (set of steps).
+
 Possible requirements
 ---------------------
 
