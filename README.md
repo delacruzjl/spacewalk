@@ -9,8 +9,8 @@ So we need a better method for writing procedures with multiple people working i
 
 1. Users write source procedures (probably in YAML or some other simple syntax)
 2. Users run a command to convert these into final product:
-  1. YAML looped over to generate an HTML table
-  2. HTML is converted into PDF or DOCX (or both/either)
+    1. YAML looped over to generate an HTML table
+    2. HTML is converted into PDF or DOCX (or both/either)
 
 The key here is that the source procedures would not require formatting; they're just text files which have all the pretty formatting added to PDF/DOCX files in the build process. Furthermore, this would allow for options like variables and subroutines.
 
