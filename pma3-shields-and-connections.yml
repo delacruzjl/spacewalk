@@ -1,0 +1,41 @@
+---
+# Title and expected duration of the task
+- title: PMA 3 cummerbunds install
+  duration: 45
+
+
+  steps:
+  # First steps in IV column (first column)
+  - IV:
+    - step: Start (EV1) PMA3 CUMMERBUNDS PET (expect 00:30) ____:____
+    - step: Start (EV2) PMA3 CUMMERBUNDS PET (expect 00:30) ____:____
+
+  # Steps in EV1 column (second column)
+  - EV1:
+    - step: Translate to PMA3 port/aft via Lab Struts, EV1 follows
+      checks:
+        - Up CETA Spur to Face 1
+        - Nadir to LAB on port/outboard LAB strut
+        - Drop GREEN hook on inboard port LAB strut HR 1002 or Lab 0246 near base of port LAB strut
+
+  # Steps in EV2 column (third column)
+  - EV2:
+    - step: Translate to PMA3 stbd/aft via ESP2 starboard route, EV2 leads
+      checks:
+        - Around edge of ESP-2 to gap spanner
+        - Zenith across stbd Fluid Tray
+        - Drop GREEN hook on stbd LAB HR 0247 (near base of stbd LAB strut)
+    - step: Stow Cummerbund ORU Bag on PMA3 HR 1609 and 1605 (zenith stanchion) w/ hinge Nadir
+      comment: this is dumb
+    - step: Open bag lid and restrain open using lid straps to HRs 1606 and 1605 (nadir stanchion)
+
+  # Combined columns puts the steps on both crewmembers, and creates a sync
+  # point where the text lines up.
+  - EV1 + EV2:
+    - step: Verify safety tethers not crossing
+
+  # Adding images
+  - IV:
+    - image: pma3-large-oru-bag-location.jpg
+  - EV1 + EV2:
+    - image: pma3-translation.jpg

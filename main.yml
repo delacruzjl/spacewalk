@@ -1,0 +1,63 @@
+---
+name: US EVA EPIC Shields
+
+actors:
+  - role: EV1
+    name: Sam
+  - role: EV2
+    name: Alex
+  - role: SSRMS/M1
+    name: Chris
+
+tasks:
+  # Include some tasks. EVAs start with egressing from the Airlock
+  - file: egress.yml
+  - file: pma3-shields-and-connections.yml
+  - file: ext-mdm-and-pma3-cover-remove.yml
+
+  # Apply this task to EV1 only. Tasks should specify number of crew. If:
+  # - task=1 and applied=2: Put Steps on EV1, give EV2 "assist as reqd'" step
+  # - task=1 and applied=1: Expected
+  # - task=2 and applied=1: Error: 2 crew reqd
+  # - task=2 and applied=2: Expected
+  - file: single-person-task.yml
+    actors: EV1
+
+  # Optionally explicitly declare who is performing task. Not required since
+  # default is both EV1 and EV2 in that order. May be required if we did a 3+
+  # crew EVA (but we haven't done that in the past, nor do we currently plan to
+  # do so). Also can be used to explicitly define who's doing what,
+  # particularly if the order may swap back-and-forth during development
+  - file: a-2-crew-task.yml
+    actors:
+      - EV1
+      - EV2
+
+  # Grab a task-list (list of tasks out there that can be performed) but swap
+  # who is doing what on the task. Ability to retrieve tasks from Git repos
+  # would be _awesome_!
+  - repo: https://gitlab.example.com/eva/tasklist
+    version: "1.0.5"
+    file: some-thing-on-tasklist.yml
+    actors:
+      # Note change in order, 2 before 1
+      - EV2
+      - EV1
+
+  # Airlock egresses and ingresses are pretty standard. We have a few different
+  # ways we do them, though. This is another place it'd be great to pull from a
+  # central repository.
+  - repo: https://gitlab.example.com/eva/ingresses
+    file: tetherpacks-daisychain.yml
+    version: master
+    actors:
+      - EV2
+      - EV1
+    # Though ingresses are pretty standard, there are some specific things we'd
+    # need to put into them. For example, pretty much every ingress EV1 and EV2
+    # are carrying some bag with them that they need to stow in the Airlock
+    # first. We could pass variables to this task to add these details.
+    vars:
+      actor1_bag: Crewlock Bag 1
+      actor2_bag: PMA3 Cummerbunds Large ORU Bag
+
