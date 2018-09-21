@@ -1,0 +1,24 @@
+{
+  "name": "evachecklist",
+  "version": "1.0.0",
+  "description": "Spacewalk EVA Checklist",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delacruzjl/spacewalk.git"
+  },
+  "keywords": [
+    "spacewalk",
+    "eva",
+    "checklist"
+  ],
+  "author": "Fall 2018 SWEN 670 Group 3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delacruzjl/spacewalk/issues"
+  },
+  "homepage": "https://github.com/delacruzjl/spacewalk#readme"
+}
