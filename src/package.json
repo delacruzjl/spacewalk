@@ -1,0 +1,30 @@
+{
+  "name": "spacewalk",
+  "version": "1.0.0",
+  "description": "YAML parser for EVA spacewalk",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesmontalvo3/spacewalk.git"
+  },
+  "keywords": [
+    "eva",
+    "spacewalk",
+    "git",
+    "node",
+    "npm",
+    "yaml"
+  ],
+  "author": "Jason Foley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesmontalvo3/spacewalk/issues"
+  },
+  "homepage": "https://github.com/jamesmontalvo3/spacewalk#readme",
+  "dependencies": {
+    "js-yaml": "^3.12.0"
+  }
+}
