@@ -1,30 +1,30 @@
 {
-  "name": "spacewalk",
+  "name": "evachecklist",
   "version": "1.0.0",
-  "description": "YAML parser for EVA spacewalk",
-  "main": "main.js",
+  "description": "Spacewalk EVA Checklist",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jamesmontalvo3/spacewalk.git"
+    "url": "git+https://github.com/delacruzjl/spacewalk.git"
   },
   "keywords": [
-    "eva",
     "spacewalk",
-    "git",
-    "node",
-    "npm",
-    "yaml"
+    "eva",
+    "checklist"
   ],
-  "author": "Jason Foley",
-  "license": "ISC",
+  "author": "Fall 2018 SWEN 670 Group 3",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jamesmontalvo3/spacewalk/issues"
+    "url": "https://github.com/delacruzjl/spacewalk/issues"
   },
-  "homepage": "https://github.com/jamesmontalvo3/spacewalk#readme",
+  "homepage": "https://github.com/delacruzjl/spacewalk#readme",
   "dependencies": {
-    "js-yaml": "^3.12.0"
+    "commander": "^2.19.0",
+    "js-yaml": "^3.12.0",
+    "lodash": "^4.17.11"
   }
 }
