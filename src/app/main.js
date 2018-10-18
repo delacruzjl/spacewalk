@@ -11,7 +11,7 @@ function startUp() {
     let actors;
     let files;
 
-    let doc = yaml.safeLoad(fs.readFileSync('./../main.yml', 'utf8'));
+    let doc = yaml.safeLoad(fs.readFileSync('../main.yml', 'utf8'));
     actors = _.get(doc, 'actors');
     console.log(actors);
     files = _.get(doc, 'tasks');

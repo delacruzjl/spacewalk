@@ -1,3 +1,3 @@
-var main = require('./main');
+var main = require('./app/main');
 
 main.startUp();
