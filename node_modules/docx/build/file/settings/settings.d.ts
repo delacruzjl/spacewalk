@@ -1,0 +1,45 @@
+import { XmlAttributeComponent, XmlComponent } from "../../file/xml-components";
+export interface ISettingsAttributesProperties {
+    wpc?: string;
+    mc?: string;
+    o?: string;
+    r?: string;
+    m?: string;
+    v?: string;
+    wp14?: string;
+    wp?: string;
+    w10?: string;
+    w?: string;
+    w14?: string;
+    w15?: string;
+    wpg?: string;
+    wpi?: string;
+    wne?: string;
+    wps?: string;
+    Ignorable?: string;
+}
+export declare class SettingsAttributes extends XmlAttributeComponent<ISettingsAttributesProperties> {
+    protected xmlKeys: {
+        wpc: string;
+        mc: string;
+        o: string;
+        r: string;
+        m: string;
+        v: string;
+        wp14: string;
+        wp: string;
+        w10: string;
+        w: string;
+        w14: string;
+        w15: string;
+        wpg: string;
+        wpi: string;
+        wne: string;
+        wps: string;
+        Ignorable: string;
+    };
+}
+export declare class Settings extends XmlComponent {
+    constructor();
+    addUpdateFields(): void;
+}

@@ -1,0 +1,23 @@
+export declare class StyleLevel {
+    styleName: string;
+    level: number;
+    constructor(styleName: string, level: number);
+}
+export interface ITableOfContentsOptions {
+    captionLabel?: string;
+    entriesFromBookmark?: string;
+    captionLabelIncludingNumbers?: string;
+    sequenceAndPageNumbersSeparator?: string;
+    tcFieldIdentifier?: string;
+    hyperlink?: boolean;
+    tcFieldLevelRange?: string;
+    pageNumbersEntryLevelsRange?: string;
+    headingStyleRange?: string;
+    entryAndPageNumberSeparator?: string;
+    seqFieldIdentifierForPrefix?: string;
+    stylesWithLevels?: StyleLevel[];
+    useAppliedParagraphOutlineLevel?: boolean;
+    preserveTabInEntries?: boolean;
+    preserveNewLineInEntries?: boolean;
+    hideTabAndPageNumbersInWebView?: boolean;
+}
