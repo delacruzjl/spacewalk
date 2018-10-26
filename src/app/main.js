@@ -12,7 +12,7 @@ function startUp(fileLocation) {
 
     let doc = yaml.safeLoad(fs.readFileSync(fileLocation, 'utf8'));
     actors = _.get(doc, 'actors');
-    console.log(actors);
+    console.log('*actors from doc', actors);
     files = _.get(doc, 'tasks');
 
     _.forEach(files, (file) => {
@@ -33,8 +33,7 @@ function startUp(fileLocation) {
 // to run this command, in the console run node main.js -e or --export. This will only work if it's ran soley by itself.
 // We need to talk about how to refactor the code to make more sense.
 
-// Version info
-program.version('0.0.1', '-v, --version');
+
 
 // Options
 

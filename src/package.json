@@ -4,8 +4,12 @@
   "description": "Spacewalk EVA Checklist",
   "main": "index.js",
   "scripts": {
+    "pretest": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
+  },
+  "bin": {
+    "eva-taskGenerator": "./index.js"
   },
   "repository": {
     "type": "git",
