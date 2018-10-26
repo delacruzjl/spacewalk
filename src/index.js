@@ -22,7 +22,7 @@ if (program.input) {
     console.log(`Getting actors array...`);
 
     //TODO: loop thru tasks and build the output
-    let output = {
+    let evaTaskList = {
         actors: actors
     };
     _.forEach(_.get(yml, 'tasks'), (task) => {
@@ -31,9 +31,9 @@ if (program.input) {
             let fileTask = doc.genericEvaTask(`${__dirname}/${path}`);
 
             if (fileTask !== null) {
-                output[_.split(path, '.')[0]] = fileTask;
+                evaTaskList[_.split(path, '.')[0]] = fileTask;
             }
         }
     });
-    console.log('result', output);
+    console.log('result', evaTaskList);
 }
